@@ -13,7 +13,7 @@ char *cus_strcat(char *dest, char *src)
 	int len = 0;
 	int len2 = 0;
 	int total_len = 0;
-	int j = 0, i;
+	int j = 0;
 
 	for (; dest[len] != '\0'; len++, total_len++)
 		;
