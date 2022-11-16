@@ -35,7 +35,7 @@ char *cus_dupstr(char *name, int bytes)
 char *_getenv(char *name, list_t *env)
 {
 	int j = 0, bytes = 0;
-	
+
 	while (env != NULL)
 	{
 		j = 0;
