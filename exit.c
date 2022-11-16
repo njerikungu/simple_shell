@@ -38,7 +38,7 @@ int __exit(char **str, list_t *env, int num, char **cmd)
 
 	if (exit_value == -1)
 	{
-		illegal_number(str[1], num, env);
+		illegal_num(str[1], num, env);
 		freeptr(str);
 		return (2);
 	}
