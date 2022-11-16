@@ -1,7 +1,8 @@
 #include "simpleshell.h"
 
 /**
- * clear_exit - frees user's typed command and linked list before exiting
+ * clear_exit - frees user's typed command and linked
+ * list before exiting
  * @str: user's typed command
  * @env: input the linked list of envirnment
  */
@@ -15,7 +16,6 @@ void clear_exit(char **str, list_t *env)
 
 /**
  * _execve - execute command user typed into shell
- * @s: command user typed
  * @env: environmental variable
  * @num: nth user command; to be used in error message
  * @str: typed command
