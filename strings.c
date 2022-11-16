@@ -13,7 +13,6 @@ char *_strcat(char *dest, char *src)
 	int total_len = 0;
 	int j = 0;
 
-	/* find total length of both strings to _realloc */
 	while (dest[len] != '\0')
 	{
 		len++;
@@ -24,18 +23,7 @@ char *_strcat(char *dest, char *src)
 		len2++;
 		total_len++;
 	}
-    /**
-    for (len = 0; dest[len] != '\0'; len++)
-    {
-        total_len++;
-    }
-    for (len2 = 0; src[len2] != '\0'; len2++)
-    {
-        total_len++;
-    }
-    */
-
-	/* _realloc because dest was malloced outside of function */
+	
 	dest = _realloc(dest, len, sizeof(char) * total_len + 1);
 
 	while (src[j] != '\0')
@@ -44,13 +32,6 @@ char *_strcat(char *dest, char *src)
 		len++;
 		j++;
 	}
-    /*
-    for (j = 0; src[j] != '\0'; j++)
-    {
-        *(dest + len) = *(src + j);
-        len++;
-    }
-    */
 
 	dest[len] = '\0';
 	return (dest);
@@ -66,21 +47,19 @@ char *_strdup(char *str)
 	char *str_dup;
 	int i, len = 0;
 
-	if (str == NULL) /* validate str input */
+	if (str == NULL)
 		return (NULL);
 
 	while (str[len])
 		len++;
-	len++; /* add null terminator to length */
-
-	str_dup = malloc(sizeof(char) * len); /* allocate memory */
+	len++;
+	str_dup = malloc(sizeof(char) * len);
 	if (str_dup == NULL)
 		return (NULL);
 
 	i = 0;
 	while (i < len)
-    /*for (i = 0; i < len; i++)
-    */
+    
 	{
 		str_dup[i] = str[i];
 		i++;
