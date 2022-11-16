@@ -23,7 +23,7 @@ char *_strcat(char *dest, char *src)
 		len2++;
 		total_len++;
 	}
-	
+
 	dest = _realloc(dest, len, sizeof(char) * total_len + 1);
 
 	while (src[j] != '\0')
@@ -59,7 +59,7 @@ char *_strdup(char *str)
 
 	i = 0;
 	while (i < len)
-    
+
 	{
 		str_dup[i] = str[i];
 		i++;
@@ -78,18 +78,9 @@ int _strcmp(char *s1, char *s2)
 {
 	int i = 0;
 
-/* for (i = 0; *(s1 + i) == *(s2 + i) && *(s1 + i); i++)
-;
-{
-    if (*(s2 + i))
-    return (*(s1 + i) - *(s2 + i));
-    else 
-    return (0);
-}
-*/
 	while (*(s1 + i) == *(s2 + i) && *(s1 + i))
 		i++;
-    if (*(s2 + i))
+	if (*(s2 + i))
 		return (*(s1 + i) - *(s2 + i));
 	else
 		return (0);
@@ -104,22 +95,9 @@ int _strcmp(char *s1, char *s2)
  * Return: copy of original source
  */
 
- char *_strcpy(char *dest, char *src)
+char *_strcpy(char *dest, char *src)
 {
 	int i, len;
-/*
-len = 0;
-while (src[len] != '\0')
-len ++;
-
-i = 0;
-while (i <= len)
-*(dest + i) = *(src + i);
-i++;
-
-return (dest);
-}
-*/
 
 i = 0;
 
