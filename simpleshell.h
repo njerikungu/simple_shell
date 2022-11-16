@@ -56,7 +56,7 @@ int _setenv(list_t **env, char **str);
 int _findenv(list_t *env, char *str);
 void not_found(char *str, int num, list_t *env);
 void cant_cd_to(char *str, int c_n, list_t *env);
-void illegal_number(char *str, int c_n, list_t *env);
+void illegal_num(char *str, int c_n, list_t *env);
 char *int_to_string(int num);
 
 #endif
