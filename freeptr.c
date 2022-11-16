@@ -1,4 +1,4 @@
-#include "test_shell.h"
+#include "simpleshell.h"
 
 /**
  * freeptr - free malloced arrays
