@@ -98,14 +98,20 @@ int _strcmp(char *s1, char *s2)
 char *_strcpy(char *dest, char *src)
 {
 	int i, len;
-
-i = 0;
-
-	for (len = 0; src[len] != '\0'; len++)
-		;
-
-	for (i = 0; i <= len; i++)
+	
+	i = 0;
+	len = 0;
+	
+	while (src[len] != '\0')
+	{
+		len++;
+	}
+	
+	while (i <= len)
+	{
 		dest[i] = src[i];
+		i++;
+	}
 
 	return (dest);
 }
