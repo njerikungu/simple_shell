@@ -1,4 +1,4 @@
-#include "simpleshell.h"
+#include "test_shell.h"
 
 /**
  * ctrl_c - ignore Ctrl-C input and prints prompt again
